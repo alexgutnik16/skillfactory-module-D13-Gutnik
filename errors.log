@@ -1,0 +1,12 @@
+(<class 'NameError'>, NameError("name 'nes_category_id' is not defined"), <traceback object at 0x7fc38845f080>) /Users/alexgutnik/PycharmProjects/NewsPortal/venv/lib/python3.9/site-packages/django/utils/log.py [2022-03-04 10:03:30,063] ERROR Internal Server Error: /news/subscribed/1
+Traceback (most recent call last):
+  File "/Users/alexgutnik/PycharmProjects/NewsPortal/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/alexgutnik/PycharmProjects/NewsPortal/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/alexgutnik/PycharmProjects/NewsPortal/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/alexgutnik/PycharmProjects/NewsPortal/NewsPaper/news/views.py", line 21, in subscribe_me
+    my_category = Category.objects.get(id=nes_category_id)
+NameError: name 'nes_category_id' is not defined
+None /Users/alexgutnik/PycharmProjects/NewsPortal/venv/lib/python3.9/site-packages/django/core/servers/basehttp.py [2022-03-04 10:03:30,065] ERROR "GET /news/subscribed/1 HTTP/1.1" 500 72778
